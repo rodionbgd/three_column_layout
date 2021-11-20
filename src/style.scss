@@ -1,0 +1,151 @@
+$bg-color: #0072b0;
+$color: white;
+
+:root {
+  box-sizing: border-box;
+}
+
+*,
+:before,
+:after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: Helvetica, Arial, sans-serif;
+  background-color: #fff;
+  margin: 0;
+  * + * {
+    margin-top: 1.5em;
+  }
+}
+
+.header {
+  margin-top: 0;
+  padding: 1em 1.5em;
+  color: $color;
+  background-color: $bg-color;
+}
+
+.center {
+  text-align: center;
+}
+
+.container {
+  display: flex;
+  > * + * {
+    margin-top: 0;
+    margin-left: 0.5em;
+  }
+  > * {
+    background-color: $color;
+  }
+}
+
+.filter,
+.sidebar {
+  flex: 20%;
+}
+
+.filter {
+  border-right: 1px solid $bg-color;
+  > * {
+    margin: 0 1em;
+  }
+  &__title {
+    color: $bg-color;
+    padding: 0.5em 1.5em;
+    border: 1px solid $bg-color;
+    border-radius: 1em;
+  }
+
+  &__list {
+    padding-left: 0;
+    margin: 0.5em 0 0;
+    font-size: 1.1em;
+    list-style-type: none;
+
+    li {
+      display: block;
+      padding: 0.5em 1.5em;
+      text-decoration: none;
+      cursor: pointer;
+
+      &:hover {
+        background-color: #8fa0c3;
+      }
+    }
+  }
+}
+
+.main {
+  margin-top: 0;
+
+  &__title {
+    margin-top: 0;
+  }
+
+  &__items {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0 0.5em;
+    > * + * {
+      margin-left: 0.5em;
+    }
+
+    &__item {
+      width: 100%;
+      margin-top: 0;
+      img {
+        width: 100%;
+        border-radius: 0.5em;
+      }
+
+      &__title {
+        margin-top: 0.5em;
+        font-weight: bold;
+      }
+    }
+  }
+}
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 1.5em;
+  border-left: 1px solid $bg-color;
+
+  &__link {
+    display: block;
+    padding: 0.5em;
+    color: $color;
+    background-color: $bg-color;
+    text-transform: uppercase;
+    text-decoration: none;
+  }
+}
+
+.footer {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  padding: 1em 0;
+  font-size: 0.9rem;
+
+  &__contact {
+    color: $bg-color;
+    font-size: 3em;
+    border-radius: 100%;
+    -webkit-transition: all 0.2s linear;
+    -o-transition: all 0.2s linear;
+    transition: all 0.2s linear;
+
+    &:active,
+    &:focus,
+    &:hover {
+      color: #4564ff;
+    }
+  }
+}

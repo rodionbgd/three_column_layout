@@ -1,0 +1,138 @@
+:root {
+  box-sizing: border-box;
+}
+
+*,
+:before,
+:after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: Helvetica, Arial, sans-serif;
+  background-color: #fff;
+  margin: 0;
+}
+body * + * {
+  margin-top: 1.5em;
+}
+
+.header {
+  margin-top: 0;
+  padding: 1em 1.5em;
+  color: white;
+  background-color: #0072b0;
+}
+
+.center {
+  text-align: center;
+}
+
+.container {
+  display: flex;
+}
+.container > * + * {
+  margin-top: 0;
+  margin-left: 0.5em;
+}
+.container > * {
+  background-color: white;
+}
+
+.filter,
+.sidebar {
+  flex: 20%;
+}
+
+.filter {
+  border-right: 1px solid #0072b0;
+}
+.filter > * {
+  margin: 0 1em;
+}
+.filter__title {
+  color: #0072b0;
+  padding: 0.5em 1.5em;
+  border: 1px solid #0072b0;
+  border-radius: 1em;
+}
+.filter__list {
+  padding-left: 0;
+  margin: 0.5em 0 0;
+  font-size: 1.1em;
+  list-style-type: none;
+}
+.filter__list li {
+  display: block;
+  padding: 0.5em 1.5em;
+  text-decoration: none;
+  cursor: pointer;
+}
+.filter__list li:hover {
+  background-color: #8fa0c3;
+}
+
+.main {
+  margin-top: 0;
+}
+.main__title {
+  margin-top: 0;
+}
+.main__items {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 0 0.5em;
+}
+.main__items > * + * {
+  margin-left: 0.5em;
+}
+.main__items__item {
+  width: 100%;
+  margin-top: 0;
+}
+.main__items__item img {
+  width: 100%;
+  border-radius: 0.5em;
+}
+.main__items__item__title {
+  margin-top: 0.5em;
+  font-weight: bold;
+}
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 1.5em;
+  border-left: 1px solid #0072b0;
+}
+.sidebar__link {
+  display: block;
+  padding: 0.5em;
+  color: white;
+  background-color: #0072b0;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.footer {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  padding: 1em 0;
+  font-size: 0.9rem;
+}
+.footer__contact {
+  color: #0072b0;
+  font-size: 3em;
+  border-radius: 100%;
+  -webkit-transition: all 0.2s linear;
+  -o-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+}
+.footer__contact:active, .footer__contact:focus, .footer__contact:hover {
+  color: #4564ff;
+}
+
+/*# sourceMappingURL=style.css.map */
